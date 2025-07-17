@@ -5,9 +5,16 @@ import logo from './Logo1.png';
 
 const images = [
   '/newhome.jpg',
-  '/threee.jpg',
-  '/four.jpg',
+  '/3.jpg',
+  '/2.jpg',
   '/five.jpg',
+];
+
+const movingTexts = [
+  'The Company Is Currently engaging in design, supply, installation and construction works related to Electromechanical sector',
+  'We deliver innovative solutions for renewable energy and infrastructure projects across the region.',
+  'Your trusted partner for electromechanical design, supply, and installation.',
+  'Empowering communities with sustainable technology and expert engineering.'
 ];
 
 function Slideshow() {
@@ -24,11 +31,20 @@ function Slideshow() {
   };
   return (
     <div className="slideshow">
+      <div className="advertising-marquee">
+        <span>{movingTexts[index]}</span>
+      </div>
       <img src={images[index]} alt={altTexts[index]} className="slide-image" />
       <div className="slide-marquee-text">
-        <span>Welcome to Blue Engineering &amp; Trade</span>
+        <div style={{ fontFamily: 'Times New Roman, Times, serif', fontSize: '2rem', color: 'black', marginBottom: '0.5rem' }}>Blue Engineering and Trade</div>
+        <span style={{ color: 'black', fontSize: '72px', fontWeight: 'bold', display: 'block', lineHeight: '1.1' }}>We build something new and consistent</span>
       </div>
-      <button className="slide-next-btn" onClick={handleNext} aria-label="Next slide">&#9654;</button>
+      <button className="slide-prev-btn" onClick={() => setIndex((prev) => (prev - 1 + imagesCount) % imagesCount)} aria-label="Previous slide">
+        &#8592;
+      </button>
+      <button className="slide-next-btn" onClick={handleNext} aria-label="Next slide">
+        &#8594;
+      </button>
       <div className="slide-dots">
         {images.map((_, i) => (
           <span key={i} className={i === index ? 'dot active' : 'dot'}></span>
@@ -133,7 +149,7 @@ function ServicesSection() {
     },
     {
       title: 'ICT Appliances',
-      icon: '💻',
+      icon: '��',
       img: '/it1.jpg',
     },
   ];
@@ -162,7 +178,7 @@ function AboutSection() {
       <div className="about-bg-banner">
         <h2>Who We Are</h2>
         <p>
-          BLUE Engineering & Trade<br />
+          <span style={{ color: 'black' }}>We Build Something New and Consistent</span><br />
           The company is currently engaged in design, supply, installation and construction works related to electromechanical sector. The core business of the company is centered at erection of MV and LV electric lines, Energy development from various sources (Solar, Wind, etc), Distribution System Automation to various customers demanding its service. The company has been providing the as main & subcontractor
         </p>
       </div>
@@ -312,7 +328,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-main">
         <div className="footer-col">
-          <h3>Blue Engineering &amp; Trade</h3>
+          <h3 style={{ color: 'black' }}>We Build Something New and Consistent</h3>
           <p>BLUE ENGINEERING &amp; Trading PLC is highly committed and gave practical and conceptual activities especially in electrical installation works thereby satisfying our respected customers. In our company customers are our primary concern.</p>
           <p><strong>Opening Hours:</strong> Monday – Sat: 8:30am to 6pm</p>
         </div>
