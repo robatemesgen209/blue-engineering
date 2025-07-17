@@ -23,7 +23,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+  
 .App-link {
   color: #61dafb;
 }
@@ -653,18 +653,71 @@
 }
 
 @media (max-width: 600px) {
-  .stats-cards {
+  .App-header {
+    font-size: 1rem;
+    padding: 1rem 0.5rem;
+    min-height: 80vh;
+  }
+  .navbar {
     flex-direction: column;
-    max-width: 100%;
+    padding: 0.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .logo {
+    height: 36px;
+    margin-right: 0.5rem;
+  }
+  .slide-image, .slideshow {
+    width: 100vw;
+    height: 50vh;
+    min-height: 220px;
+    max-height: 60vw;
+  }
+  .slide-overlay-text {
+    font-size: 1.2rem;
+    width: 95vw;
+    max-width: 98vw;
+    padding: 0 0.5rem;
+  }
+  .home-services {
+    padding: 1rem 0.5rem 1.5rem 0.5rem;
+    max-width: 98vw;
+  }
+  .header-bar, .header-left, .header-right {
+    font-size: 0.95rem;
+    margin: 0 0.5rem;
+    padding: 0.3rem 0;
+  }
+  .stats-cards, .product-card-grid, .services-grid {
+    flex-direction: column;
     gap: 1rem;
   }
-  .stat-card {
-    max-width: 100%;
+  .stat-card, .product-card, .service-card {
     min-width: 0;
+    width: 100%;
+    margin: 0 auto;
   }
-  .product-card-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  .about-sections {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .footer-main {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1rem 0.5rem;
+  }
+  .footer-col {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .footer-newsletter input[type="email"] {
+    width: 90vw;
+    min-width: 0;
   }
 }
 

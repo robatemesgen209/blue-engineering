@@ -4,7 +4,7 @@ import React from 'react';
 import logo from './Logo1.png';
 
 const images = [
-  '/home.jpg',
+  '/newhome.jpg',
   '/threee.jpg',
   '/four.jpg',
   '/five.jpg',
