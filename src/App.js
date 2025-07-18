@@ -34,7 +34,9 @@ function Slideshow() {
       <img src={images[index]} alt={altTexts[index]} className="slide-image" />
       <div className="advertising-marquee">
         <span className="moving-text-desktop">{movingTexts[index]}</span>
-        <span className="moving-text-mobile">{movingTexts[index].split('.')[0]}</span>
+        {index !== 0 && (
+          <span className="moving-text-mobile">{movingTexts[index].split('.')[0]}</span>
+        )}
       </div>
       <div className="slide-marquee-text">
         <div style={{ fontFamily: 'Times New Roman, Times, serif', fontSize: '2rem', color: 'black', marginBottom: '0.5rem' }}>Blue Engineering and Trade</div>
