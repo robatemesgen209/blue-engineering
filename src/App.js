@@ -58,6 +58,15 @@ function Slideshow() {
 }
 
 function Home() {
+  const location = useLocation();
+  React.useEffect(() => {
+    if (location.hash) {
+      const section = document.getElementById(location.hash.replace('#', ''));
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
   return (
     <div>
       <Slideshow />
@@ -394,34 +403,6 @@ function Footer() {
 }
 
 function App() {
-  const location = useLocation();
-  const handleServicesClick = (e) => {
-    if (location.pathname === '/') {
-      e.preventDefault();
-      const section = document.getElementById('services-section');
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
-  const handleAboutClick = (e) => {
-    if (location.pathname === '/') {
-      e.preventDefault();
-      const section = document.getElementById('about-section');
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
-  const handleProjectsClick = (e) => {
-    if (location.pathname === '/') {
-      e.preventDefault();
-      const section = document.getElementById('number-talks-section');
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
   return (
     <div className="App">
       <div className="header-bar">
@@ -446,9 +427,9 @@ function App() {
         </Link>
         <div className="nav-links">
           <Link to="/">Home</Link>
-          <Link to="#about-section" onClick={handleAboutClick}>About Us</Link>
-          <Link to="#number-talks-section" onClick={handleProjectsClick}>Projects</Link>
-          <Link to="#services-section" onClick={handleServicesClick}>Services</Link>
+          <Link to="/#about-section">About Us</Link>
+          <Link to="/#number-talks-section">Projects</Link>
+          <Link to="/#services-section">Services</Link>
           <Link to="/contact">Contact</Link>
         </div>
       </nav>
