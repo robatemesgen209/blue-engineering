@@ -736,6 +736,12 @@
     max-width: 92vw;
     overflow-wrap: break-word;
   }
+  .slide-marquee-text > div {
+    font-size: 1rem !important;
+  }
+  .slide-marquee-text > span {
+    font-size: 1.3rem !important;
+  }
   .App-header {
     font-size: 1rem;
     padding: 1rem 0.5rem;
