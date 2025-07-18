@@ -129,7 +129,27 @@ function Services() {
 }
 
 function Contact() {
-  return <div><h2>Contact</h2><p>Contact details will be available soon.</p></div>;
+  const handleContactButton = () => {
+    // Scroll to this section or focus it
+    const contactSection = document.getElementById('contact-section');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  return (
+    <div id="contact-section">
+      <h2>Contact</h2>
+      <div style={{ marginBottom: '1.5rem' }}>
+        <h3>Office address</h3>
+        <div>Near Kelifa Bldg<br />Addis Ababa, Ethiopia</div>
+        <h3 style={{ marginTop: '1rem' }}>Email us</h3>
+        <div>info@blueethio.com</div>
+        <h3 style={{ marginTop: '1rem' }}>Call us</h3>
+        <div>+251 91 305 2170<br />+251 91 141 6595</div>
+      </div>
+      <button className="contact-now-btn" onClick={handleContactButton}>Contact</button>
+    </div>
+  );
 }
 
 function ServicesSection() {
