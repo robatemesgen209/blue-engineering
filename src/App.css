@@ -866,6 +866,9 @@ html, body {
     padding: 0 !important;
     box-sizing: border-box;
   }
+  .header-bar {
+    display: none !important;
+  }
 }
 
 .footer {
