@@ -727,7 +727,7 @@
     bottom: 10px;
   }
   .advertising-marquee span, .advertising-marquee {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.2;
     padding: 0 4vw;
     word-break: break-word;
@@ -736,11 +736,45 @@
     max-width: 92vw;
     overflow-wrap: break-word;
   }
+  .slide-marquee-text {
+    left: 50% !important;
+    width: 98vw !important;
+    max-width: 99vw !important;
+    padding: 0 2vw !important;
+    text-align: center !important;
+    box-sizing: border-box;
+  }
   .slide-marquee-text > div {
     font-size: 1rem !important;
+    padding-bottom: 0.3rem;
+    word-break: break-word;
+    white-space: normal;
   }
   .slide-marquee-text > span {
     font-size: 1.3rem !important;
+    word-break: break-word;
+    white-space: normal;
+    display: block;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+  }
+  .slide-next-btn, .slide-prev-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+    right: 8px;
+    left: 8px;
+    border-radius: 50%;
+    padding: 0;
+  }
+  .slide-next-btn {
+    right: 8px;
+  }
+  .slide-prev-btn {
+    left: 8px;
+  }
+  .slide-dots {
+    bottom: 10px;
   }
   .App-header {
     font-size: 1rem;
@@ -921,7 +955,7 @@
   display: none;
 }
 .advertising-marquee span, .advertising-marquee {
-  font-size: 40px;
+  font-size: 22px;
   font-weight: 800;
   color: #111;
   text-shadow: 0 0 16px #0074d9, 0 2px 8px #0074d9, 0 1px 2px #0074d9;
