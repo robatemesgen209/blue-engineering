@@ -1,3 +1,11 @@
+html, body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -844,6 +852,22 @@
   .footer-newsletter input[type="email"] {
     width: 90vw;
     min-width: 0;
+  }
+  .footer, .footer-main, .footer-bottom {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box;
+  }
+  .App, .page-content {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
   }
 }
 
