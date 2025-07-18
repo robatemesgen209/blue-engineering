@@ -1016,5 +1016,6 @@
   }
   .moving-text-mobile {
     display: inline !important;
+    font-size: 11px !important;
   }
 }
