@@ -424,7 +424,6 @@ function App() {
         <Link to="/">
           <img src={logo} alt="Company Logo" className="logo" />
         </Link>
-        <div className="spacer"></div>
         <div className="nav-links">
           <Link to="/">Home</Link>
           <Link to="#about-section" onClick={handleAboutClick}>About Us</Link>

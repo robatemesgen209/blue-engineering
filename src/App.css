@@ -56,13 +56,10 @@ html, body {
   padding-top: 0;
 }
 
-.navbar .spacer {
-  flex: 1;
-}
-
 .nav-links {
   display: flex;
   gap: 2rem;
+  margin-left: auto;
 }
 
 .navbar a {
