@@ -757,9 +757,9 @@
   }
   .slide-image, .slideshow {
     width: 100vw;
-    height: 38vh;
-    min-height: 120px;
-    max-height: 50vw;
+    height: 25vh;
+    min-height: 80px;
+    max-height: 40vw;
   }
   .slide-overlay-text {
     font-size: 1.2rem;
